@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Lucida Sans, Verdana;
+      }
+
+      .header {
+        background-color: #333;
+        color: #fff;
+        padding: 1rem;
+        text-align: center;
+        box-shadow: 0 0 0.5em #333;
+      }
+
+      .conteudo {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 1rem;
+        
+      }
+
+      li {
+        margin: 2px;
+        list-style: none;
+        background-color: #04AA6D;
+        width: 10em;
+        border-radius: 0.2em;
+        padding: 0.2rem;
+        font-size: 1rem;
+      }
+
+      li:nth-child(1){
+    background-color: #333;
+ }
+
+ li:nth-child(1) a{
+    color: #fff;
+ }
+
+      li:hover {
+        background-color: #333;
+      }
+
+      li a {
+        color: #fff;
+        text-decoration: none;
+      }
+      
+      .aside {
+        width: 40em;
+        margin-left: 5em;
+        background-color: #32a4e7;
+        padding: 2em;
+        color: #fff;
+        border-radius: 1em;
+      }
+
+      .main {
+        margin-left: 20px ;
+        margin-right: 20px ;
+      }
+
+      .main h1, p {
+        margin-top: 20px;
+      }
+
+      .menu {
+        margin-right: 5em;
+      }
+    </style>
+    <div class="header">
+      <h1>Bem vindos a minha pagina</h1>
+      <p>Utilize o menu para acessar diferentes stylesheets</p>
+    </div>
+    <div class="conteudo">
+      <div class="menu">
+        <ul>
+          <li><a href="style1.html">Stylesheets 1</a></li>
+          <li><a href="style2.html">Stylesheets 2</a></li>
+          <li><a href="style3.html">Stylesheets 3</a></li>
+          <li><a href="index.html">No Stylesheets</a></li>
+        </ul>
+      </div>
+      <div class="main">
+        <h1>
+          Esta pagina tem o mesmo HTML, porém diferentes estilos
+        </h1>
+        <p>
+          Isto é uma demonstração de como diferentes estilos podem mudar
+          completamente o layout e cores dá página. Você pode alterar os estilos
+          clicando nos seguintes <b>links</b>: <a href="">Stylesheet 1</a>,
+          <a href="">Stylesheet 2</a>, <a href="">Stylesheet 3</a>,
+          <a href="">No Stylesheet</a>
+        </p>
+
+        <h1>Sem estilo</h1>
+        <p>
+          Esta página utliza DIV para agrupar diferentes seções do HTML.
+          Clicando neste link vc vai acessar a página sem estilos <a href="index.html">Sem stylesheet</a>
+        </p>
+      </div>
+      <div class="aside">
+          <h2>Side-bar</h2>
+          <p>
+              Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+              nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
+              volutpat. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
+              diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
+              volutpat. 
+            </p>
+        </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo Prático com JSONPlaceholder API</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        #posts {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .post {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 10px;
+            width: 300px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Lista de Posts com Autor e Foto</h1>
+
+    <div id="posts">
+        <!-- Os posts da API serão exibidos aqui -->
+    </div>
+
+    <script>
+        async function obterDadosDaAPI() {
+            try {
+                const [postsResposta, usersResposta, photosResposta] = await Promise.all([
+                    fetch('https://jsonplaceholder.typicode.com/posts'),
+                    fetch('https://jsonplaceholder.typicode.com/users'),
+                    fetch('https://jsonplaceholder.typicode.com/photos')
+                ]);
+
+                const posts = await postsResposta.json();
+                const users = await usersResposta.json();
+                const photos = await photosResposta.json();
+
+                exibirPosts(posts, users, photos);
+            } catch (erro) {
+                console.error('Erro ao obter dados da API:', erro);
+            }
+        }
+
+        function exibirPosts(posts, users, photos) {
+            const postsContainer = document.getElementById('posts');
+
+            // Limpar qualquer conteúdo anterior
+            postsContainer.innerHTML = '';
+
+            // Iterar sobre cada post e criar elementos HTML
+            posts.forEach(post => {
+                const postElemento = document.createElement('div');
+                postElemento.classList.add('post');
+
+                const titleElemento = document.createElement('h2');
+                titleElemento.textContent = post.title;
+
+                const bodyElemento = document.createElement('p');
+                bodyElemento.textContent = post.body;
+
+                const user = users.find(user => user.id === post.userId);
+                if (user) {
+                    const authorElemento = document.createElement('p');
+                    authorElemento.textContent = `Autor: ${user.name}`;
+                    postElemento.appendChild(authorElemento);
+                }
+
+                const photo = photos.find(photo => photo.id === post.id);
+                if (photo) {
+                    const imgElemento = document.createElement('img');
+                    imgElemento.src = photo.url;
+                    imgElemento.alt = `Foto associada ao post ${post.id}`;
+                    postElemento.appendChild(imgElemento);
+                }
+
+                postElemento.appendChild(titleElemento);
+                postElemento.appendChild(bodyElemento);
+
+                postsContainer.appendChild(postElemento);
+            });
+        }
+
+        // Chamar a função para obter e exibir os posts ao carregar a página
+        obterDadosDaAPI();
+    </script>
+
+</body>
+</html>

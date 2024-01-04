@@ -1,0 +1,14 @@
+https://api.thecatapi.com/v1/images/search?size=med&mime_types=jpg&format=json&has_breeds=true&order=RANDOM&page=0&limit=1
+
+
+API RESTAURANT
+https://res.cloudinary.com/practicaldev/image/fetch/s--jtauvUNI--/c_imagga_scale,f_auto,fl_progressive,h_720,q_auto,w_1280/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/qvaysugwhd9mge3pxr7j.png
+
+ANIMATE LIBRARY 
+https://animate.style/
+
+DRIVE 
+https://drive.google.com/drive/folders/1FmioyBqCXj6wEY3m_PAVRg9jLwIUmj6a
+
+CAT API 
+https://documenter.getpostman.com/view/5578104/RWgqUxxh#7fde7c73-8e64-49d7-a6ca-22132e3fc84c

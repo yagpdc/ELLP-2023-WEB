@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <style>
+
+        body{
+            text-align: center;
+            max-width: 500px; 
+            margin: auto;
+            background-color: #000;
+            color: #fff;
+            font-family: Fire-Code, monospace;
+        }
+
+        h3{
+            font-size: 2rem;
+            margin: 10px;
+        }
+
+        input {
+            font-size: 1.1rem;
+            margin-bottom:20px ;
+        }
+
+        .resultado {
+            font-size: 2rem;
+            background-color: #8585f8;
+            width: 100%;
+            margin: 20px 0;
+        }
+
+        #contador {
+            background-color: #000;
+        }
+        
+
+
+    </style>
+    <div>
+        <h3>Digite um numero</h3>
+        <input type="number" name="numero" id="numero">
+        <input type="number" name="numero" id="numero-2">
+        <input type="button" value="Enviar" id="enviar" onclick="add()">
+        <div class="resultado" id="num"></div>
+    </div>
+
+    <div>
+        <h3>Digite o seu nome e sobrenome</h3>
+        <input type="text" placeholder="Digite o seu nome" id="nome">
+        <input type="text" placeholder="Digite o seu sobrenome" id="sobrenome">
+        <button onclick="addString()">Enviar</button>
+        <div class="resultado" id="string"></div>
+    </div>
+    <div>
+        <h3>Digite um numero</h3>
+        <input type="number" placeholder="Par ou impar..." id="oddEven" onkeyup="parOuImpar()">
+        <div class="resultado" id="parOuImpar"></div>
+    </div>
+    <div class="contador">
+        <h3>Contadores</h3>
+        <button onclick="divideBy2()" >/</button>
+        <button onclick="contadorPlus()">+</button>
+        <button onclick="contadorMinus()">-</button>
+        <button onclick="multiplyBy2()">x2</button>
+        <div class="resultado" id="contador">0</div>
+
+    </div>
+
+    
+
+    <script>
+        let display = document.querySelector("#contador")
+
+        let contadorNum = 0
+
+        function contadorPlus(){
+            contadorNum++
+            display.innerHTML = contadorNum
+        }
+
+        function contadorMinus(){
+            contadorNum--
+            display.innerHTML = contadorNum
+        }
+
+
+        function multiplyBy2(){
+            contadorNum = contadorNum * 2
+            display.innerHTML = contadorNum
+        }
+
+        function divideBy2(){
+            contadorNum = contadorNum / 2
+            display.innerHTML = contadorNum
+        }
+
+
+
+        let numeroUm = document.querySelector("#numero")
+        let enviar = document.querySelector("#enviar")
+        let numeroDois = document.querySelector("#numero-2")
+
+        
+        function add(){
+            let resultadoNum = document.querySelector("#num")
+            let valores = parseInt(numeroUm.value) + parseInt(numeroDois.value)
+            resultadoNum.innerHTML = valores
+        }
+
+
+        let nome = document.querySelector("#nome")
+        let sobrenome = document.querySelector("#sobrenome")
+
+        function addString(){
+            let resultadoStr = document.querySelector("#string")
+            let valores = nome.value + " " +  sobrenome.value
+            resultadoStr.innerHTML = valores
+        }
+
+        let parouimpar = document.querySelector("#oddEven")
+        let resultadoParOuImpar = document.querySelector("#parOuImpar")
+
+        function parOuImpar(){
+            let num = parouimpar.value
+            if(num == 0){
+                resultadoParOuImpar.innerHTML = "Nulo"
+            }
+            else if(num % 2 == 0){
+                resultadoParOuImpar.innerHTML = "Par"
+        }   else {
+                resultadoParOuImpar.innerHTML = "Impar"
+            }
+        }
+
+        
+
+    </script>
+</body>
+</body>
+</html>
+

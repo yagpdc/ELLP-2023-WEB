@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+      div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      #imagem {
+        width: auto;
+        height: 400px;
+      }
+    </style>
+
+    <div>
+      <img id="imagem" alt="Imagem Aleatoria" />
+    </div>
+
+    <script>
+      async function obterFotoAleatoria() {
+        try {
+          const resposta = await fetch("https://source.unsplash.com/random");
+          const imagemURL = resposta.url;
+
+          document.getElementById("imagem").src = imagemURL;
+        } catch (erro) {
+          console.error("Erro ao obter imagem:", erro);
+        }
+      }
+
+      obterFotoAleatoria();
+    </script>
+  </body>
+</html>
