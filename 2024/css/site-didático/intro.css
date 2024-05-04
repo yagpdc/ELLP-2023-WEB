@@ -1,0 +1,56 @@
+
+*{
+    font:  400 1.6rem 'Roboto', sans-serif;
+}
+
+h3{
+    font-size: 1.8rem;
+    text-align: center;
+    margin: 1rem  0;
+    background-color: black;
+    color: white;
+}
+
+main{
+    display: grid;
+    grid-template-columns: 4fr 4fr;
+    gap: 2rem;
+    padding: 0 1rem ;
+}
+
+.card{
+    border-radius: 4px;
+}
+
+.code-box {
+    background-color: #f4f4f4;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    color: #000;
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    overflow-x: auto; 
+    height: 100%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+}
+
+.prop {
+    color: #905;
+}
+
+.value {
+    color: #690;
+}
+
+.value a {
+    text-decoration: underline;
+}
+
+.value a:hover {
+    text-decoration: none;
+    color: #f00;
+}
+
+.selector {
+    color: #07a;
+}

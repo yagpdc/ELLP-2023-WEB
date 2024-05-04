@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="intro.css" />
+    <title>Grupo ELLP</title>
+  </head>
+  <body>
+    <h1 class="titulo">Introdução para css 🤖</h1>
+    <main>
+      <div class="card">
+        <div class="code-box">
+          <h3>Inline</h3>
+          <p>
+            <code>
+              <<span class="selector">div</span> <br />
+              &nbsp;&nbsp;<span class="prop">style</span>:
+              <span class="value">"color: red;background-color: blue;"</span>
+              <br />
+              ><br>
+              <<span class="selector">p</span> <br />
+              &nbsp;&nbsp;<span class="prop">style</span>:
+              <span class="value">"color: red;background-color: blue;"</span>
+              <br />
+              >
+            </code>
+          </p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="code-box">
+          <h3>Internal</h3>
+          <p>
+            <code>
+              <span class="selector" style="text-decoration: underline"
+                >style</span
+              >
+              { <br />
+                <br>
+              &nbsp;&nbsp;<span class="selector">h1</span> { <br />
+              &nbsp;&nbsp;&nbsp;&nbsp;
+              <span class="prop">background-color</span>:
+              <span class="value">red</span>; <br />
+              &nbsp;&nbsp;&nbsp;&nbsp;
+              <span class="prop">color</span>: <span class="value">red</span>;
+              <br />
+              &nbsp;&nbsp;&nbsp;&nbsp;
+              <span class="prop">padding</span>:
+              <span class="value">10px</span>; <br />
+              &nbsp;&nbsp;} <br />
+              }
+            </code>
+          </p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="code-box">
+          <h3>External</h3>
+          <p>
+            <code>
+              <<span class="selector">link</span> <span class="prop">rel</span>:
+              <span class="value">"stylesheet"</span>
+              <span class="prop">href</span>:
+              <span class="value" style="text-decoration: underline"
+                >style.css</span
+              ><br /><br />
+              <span style="color: #2d2d2da7">// Dentro do arquivo...</span>
+              <br /><br />
+            </code>
+            <code>
+              <span class="selector" style="text-decoration: underline"
+                >h1</span
+              >
+              { <br />
+              &nbsp;&nbsp;<span class="prop">color</span>:
+              <span class="value">red</span>; <br />
+              }
+            </code>
+          </p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="code-box">
+          <h3>Estruturas padrão </h3>
+          <p>
+            <code>
+              <<span class="selector">link</span> 
+              <span class="prop">href</span>:
+              <span class="value"
+                ><a class="value" href="nav.html">"Barra de navegação"</a></span
+              > ><br /><br />
+
+              <<span class="selector">link</span> 
+              <span class="prop">href</span>:
+              <span class="value"
+                ><a class="value" href="footer.html">"Footer</a></span
+              > ><br /><br />
+              <<span class="selector">link</span> 
+              <span class="prop">href</span>:
+              <span class="value"
+                ><a class="value" href="card.html">"Cards"</a></span
+              > ><br /><br />
+              <<span class="selector">link</span> 
+              <span class="prop">href</span>:
+              <span class="value"
+                ><a class="value" href="./exemplos/exemplos.html">"Exemplos para aula"</a></span
+              > ><br /><br />
+              
+            </code>
+          </p>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

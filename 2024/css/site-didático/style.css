@@ -1,0 +1,18 @@
+:root{
+    
+    
+    background-color: #026cb8;
+    color: azure;
+    
+    .titulo{
+        font-size: 2.5rem;
+        text-align: center;
+        margin: 1rem 0;
+    }
+
+    a{
+        text-decoration: none;
+    }
+
+}
+
